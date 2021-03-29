@@ -31,7 +31,13 @@ class List {
         
     }
     pop(){
+    
+        let cursor = this.head
+        while(cursor.next.next != null){
+            cursor = cursor.next
 
+        }
+        cursor.next = null
     }
 
     print(){
@@ -46,9 +52,12 @@ class List {
 
 let zz = new List ()
 
-for (let i = 0; i < 4;i++){
+for (let i = 0; i < 5;i++){
     zz.push(i)
 }
 
 zz.print()
-console.log(zz.length)
+console.log(",,,,")
+zz.pop()
+console.log(",,,,")
+zz.print()
